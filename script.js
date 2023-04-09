@@ -532,7 +532,7 @@ window.addEventListener("load", function () {
             );
           }
           if (enemy.type === "lucky") this.player.enterPowerUp();
-          else if (!this.gameOver) this.score--;
+          else if (!this.gameOver && this.score > 0) this.score--;
         }
         this.player.projectiles.forEach((projectile) => {
           if (this.checkCollision(projectile, enemy)) {
